@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Edit Products</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Front Page</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="users.html">List Users</a></li>
+          <li><a href="products.html">List Products</a></li>
+          <li><a href="editProducts.html">Edit Products</a></li>
+          <li><a href="cart.html">Shopping Cart</a></li>
+          <li><a href="orders.html">List Orders</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="notifications-container"></div>
+
+      <form id="new-product-form" class="form" method="POST">
+        <h1>Add a Product</h1>
+        <div class="form-group">
+          <label for="new-product-name">Name</label>
+          <input id="new-product-name" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="new-product-description">Description</label>
+          <textarea id="new-product-description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="new-product-image">Image URL</label>
+          <input id="new-product-image" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="new-product-price">Price</label>
+          <input id="new-product-price" type="number" step=0.01 value=1.00 />
+        </div>
+        <button id="new-product-button">Add Product</button>
+      </form>
+
+      <h1>Products</h1>
+      <div id="products-container"></div>
+
+    </main>
+    <footer>
+      <p>Copyright &copy; 2020 diipadaa etc etc.</p>
+    </footer>
+    <template id="product-template">
+      <div class="item-row product">
+        <img class="product-image" />
+        <h3 class="product-name"></h3>
+        <p class="product-description"></p>
+        <p class="product-price"></p>
+        <button class="product-edit-button">Edit Product</button>
+        <button class="product-delete-button">Delete Product</button>
+
+        <form class="edit-product-form form" method="POST">
+          <h1>Edit Product</h1>
+          <div class="form-group">
+            <label class="name-label">Name</label>
+            <input class="edit-product-name" type="text" />
+          </div>
+          <div class="form-group">
+            <label class="description-label">Description</label>
+            <textarea class="edit-product-description"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="image-label">Image URL</label>
+            <input class="edit-product-image" type="text" />
+          </div>
+          <div class="form-group">
+            <label class="price-label">Price</label>
+            <input class="edit-product-price" type="number" step=0.01 />
+          </div>
+          <button type="button" class="save-edit-button">Save Edits</button>
+          <button type="button" class="close-edit-button">Close editor</button>
+        </form>
+
+      </div>
+    </template>
+    <script src="js/utils.js"></script>
+    <script src="js/adminProducts.js"></script>
+  </body>
+</html>
