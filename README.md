@@ -1,4 +1,4 @@
-Project work for COMP.cs.500 course, made with vanilla JS and HTML. 
+Online store project work for COMP.CS.500 course, front end made with vanilla JavaScript and HTML. Back end made with JavaScript + Node.js.
 
 Project is deployed to heroku ( https://webapp48.herokuapp.com/ )
 
